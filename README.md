@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Quick Start
+1. Ensure Node.js is installed.
+2. Run `npm install` to install dependencies.
+3. Start the dev server with `npm start`.
+4. Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+Static images are served from the `public/images` folder.
+The application uses `src/App.js` as its single entry file.
+
 ## Available Scripts
 
 In the project directory, you can run:
