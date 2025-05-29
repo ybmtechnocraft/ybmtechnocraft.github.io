@@ -1,24 +1,8 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 
 function HeaderSection() {
-  useEffect(() => {
-    const header = document.querySelector('.hero-header');
-    const interval = setInterval(() => {
-      const cube = document.createElement('div');
-      cube.classList.add('floating-cube');
-      const size = Math.random() * 20 + 10;
-      cube.style.width = `${size}px`;
-      cube.style.height = `${size}px`;
-      cube.style.left = `${Math.random() * 100}%`;
-      cube.style.top = `${Math.random() * 100}%`;
-      cube.style.animationDuration = `${Math.random() * 5 + 4}s`;
-      cube.style.background = '#E74C3C';
-      header.appendChild(cube);
-      setTimeout(() => cube.remove(), 8000);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  // Cube animation removed for easier debugging and clarity
   return (
     <div className="hero-header">
       <div>YBM Techno Craft<br/>One Stop Solution for all your plastic needs</div>
@@ -199,14 +183,14 @@ function Home() {
             <div className="images_main">
               <div className="images_left">
                 <div className="container_1">
-                  <img src="images/img-2.png" alt="Avatar" className="image" style="width:100%" />
+                  <img src="images/img-2.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
                     <div className="text"><img src="images/search-icon.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
                   </div>
                 </div>
                 <div className="container_1">
-                  <img src="images/img-3.png" alt="Avatar" className="image" style="width:100%" />
+                  <img src="images/img-3.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
                     <div className="text"><img src="images/search-icon.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
@@ -215,14 +199,14 @@ function Home() {
               </div>
               <div className="images_right">
                 <div className="container_1">
-                  <img src="images/img-4.png" alt="Avatar" className="image" style="width:100%" />
+                  <img src="images/img-4.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
                     <div className="text"><img src="images/search-icon.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
                   </div>
                 </div>
                 <div className="container_1">
-                  <img src="images/img-5.png" alt="Avatar" className="image" style="width:100%" />
+                  <img src="images/img-5.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
                     <div className="text"><img src="images/search-icon.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
@@ -519,7 +503,14 @@ function Contact() {
             </div>
             <div className="col-md-6 padding_0">
               <div className="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.1309436983884!2d77.70038459999999!3d12.770007199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6f0024ff58af%3A0xd36ca4165ecc7dd0!2sYBM%20technocraft!5e0!3m2!1sen!2sin!4v1737298432147!5m2!1sen!2sin" width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.1309436983884!2d77.70038459999999!3d12.770007199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6f0024ff58af%3A0xd36ca4165ecc7dd0!2sYBM%20technocraft!5e0!3m2!1sen!2sin!4v1737298432147!5m2!1sen!2sin"
+                  width="600"
+                  height="400"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -702,9 +693,18 @@ function Production() {
     </div>
   );
 }
-function App() {
+function AppContent() {
+  const location = useLocation();
+  useEffect(() => {
+    console.log("Navigated to", location.pathname);
+  }, [location]);
+
+  useEffect(() => {
+    console.log("App mounted");
+  }, []);
+
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <HeaderSection />
       <Routes>
@@ -719,6 +719,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
