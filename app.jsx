@@ -1,4 +1,4 @@
-const { BrowserRouter, Routes, Route, Link, useLocation } = ReactRouterDOM;
+import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 
 function HeaderSection() {
   // Cube animation removed for simplicity
