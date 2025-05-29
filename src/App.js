@@ -4,7 +4,14 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-do
 function HeaderSection() {
   // Cube animation removed for easier debugging and clarity
   return (
-    <div className="hero-header">
+    <div
+      className="hero-header"
+      style={{
+        background: 'var(--accent-gradient)',
+        color: '#fff',
+        padding: '2rem 0',
+      }}
+    >
       <div>YBM Techno Craft<br/>One Stop Solution for all your plastic needs</div>
       <div className="hero-header-line"></div>
     </div>
@@ -14,8 +21,11 @@ function HeaderSection() {
 function Navbar() {
   return (
     <div className="header_section header_bg">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="logo"><Link to="/"><img src="images/logo.jpg" /></Link></div>
+      <nav
+        className="navbar navbar-expand-lg navbar-dark"
+        style={{ background: 'var(--primary-gradient)' }}
+      >
+        <div className="logo"><Link to="/"><img src="images/appIcons/Bulma.png" /></Link></div>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -45,15 +55,15 @@ function Footer() {
           <div className="col-lg-3 col-sm-6">
             <h4 className="about_text">About Financial</h4>
             <div className="location_text">
-              <img src="images/map-icon.png" alt="Map" />
+              <img src="images/appIcons/Bulma.png" alt="Map" />
               <span className="padding_left_15">Locations</span>
             </div>
             <div className="location_text">
-              <img src="images/call-icon.png" alt="Call" />
+              <img src="images/appIcons/Bulma.png" alt="Call" />
               <span className="padding_left_15">+01 9876543210</span>
             </div>
             <div className="location_text">
-              <img src="images/mail-icon.png" alt="Mail" />
+              <img src="images/appIcons/Bulma.png" alt="Mail" />
               <span className="padding_left_15">demo@gmail.com</span>
             </div>
           </div>
@@ -65,14 +75,14 @@ function Footer() {
             <h4 className="about_text">Instagram</h4>
             <div className="footer_images">
               <div className="footer_images_left">
-                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
-                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
-                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
+                <div className="image_12"><img src="images/appIcons/Bulma.png" alt="" /></div>
+                <div className="image_12"><img src="images/appIcons/Bulma.png" alt="" /></div>
+                <div className="image_12"><img src="images/appIcons/Bulma.png" alt="" /></div>
               </div>
               <div className="footer_images_right">
-                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
-                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
-                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
+                <div className="image_12"><img src="images/appIcons/Bulma.png" alt="" /></div>
+                <div className="image_12"><img src="images/appIcons/Bulma.png" alt="" /></div>
+                <div className="image_12"><img src="images/appIcons/Bulma.png" alt="" /></div>
               </div>
             </div>
           </div>
@@ -82,10 +92,10 @@ function Footer() {
             <div className="subscribe_bt"><a href="#">Subscribe</a></div>
             <div className="footer_social_icon">
               <ul>
-                <li><a href="#"><img src="images/fb-icon1.png" alt="Facebook" /></a></li>
-                <li><a href="#"><img src="images/twitter-icon1.png" alt="Twitter" /></a></li>
-                <li><a href="#"><img src="images/linkedin-icon1.png" alt="LinkedIn" /></a></li>
-                <li><a href="#"><img src="images/youtub-icon1.png" alt="YouTube" /></a></li>
+                <li><a href="#"><img src="images/appIcons/Bulma.png" alt="Facebook" /></a></li>
+                <li><a href="#"><img src="images/appIcons/Bulma.png" alt="Twitter" /></a></li>
+                <li><a href="#"><img src="images/appIcons/Bulma.png" alt="LinkedIn" /></a></li>
+                <li><a href="#"><img src="images/appIcons/Bulma.png" alt="YouTube" /></a></li>
               </ul>
             </div>
           </div>
@@ -121,7 +131,7 @@ function Home() {
             </p>
           </div>
           <div className="col-md-4">
-            <div><img src="images/img-1.png" className="image_1" /></div>
+            <div><img src="images/appIcons/Bulma.png" className="image_1" /></div>
           </div>
         </div>
       </div>
@@ -134,7 +144,7 @@ function Home() {
           <div className="row">
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/InjectionMoulding.webp" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Injection <br /> Moulding</h3>
               <ul className="lorem_text">
                   <li>Multi Cavity Injection-Mould</li>
@@ -145,7 +155,7 @@ function Home() {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/CompressionMoulding.webp" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Compression and Specialized Moulds</h3>
               <ul className="lorem_text">
                 <li>Compression-Mould</li>
@@ -156,7 +166,7 @@ function Home() {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/CastingMould.webp" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Casting and Blow Moulding</h3>
               <ul className="lorem_text">
                 <li>Die Cast-Mould</li>
@@ -166,7 +176,7 @@ function Home() {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/LSRMoulding.webp" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">LSR (Liquid Silicone Rubber) Moulding</h3>
               <ul className="lorem_text">
                 <li>First Time In India” to Develop Liquid silicon mold (LSR)</li>
@@ -185,39 +195,39 @@ function Home() {
               <h1 className="services_taital">Our projects</h1>
               <p className="services_text">It is a long established fact that a reader will be distracted by the readable content of a </p>
               <div className="moremore_bt"><a href="#">Read More </a></div>
-              <div className="image_6"><img src="images/img-6.png" /></div>
+              <div className="image_6"><img src="images/appIcons/Bulma.png" /></div>
             </div>
           </div>
           <div className="col-md-6">
             <div className="images_main">
               <div className="images_left">
                 <div className="container_1">
-                  <img src="images/img-2.png" alt="Avatar" className="image" style={{ width: '100%' }} />
+                  <img src="images/appIcons/Bulma.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
-                    <div className="text"><img src="images/search-icon.png" /></div>
+                    <div className="text"><img src="images/appIcons/Bulma.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
                   </div>
                 </div>
                 <div className="container_1">
-                  <img src="images/img-3.png" alt="Avatar" className="image" style={{ width: '100%' }} />
+                  <img src="images/appIcons/Bulma.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
-                    <div className="text"><img src="images/search-icon.png" /></div>
+                    <div className="text"><img src="images/appIcons/Bulma.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
                   </div>
                 </div>
               </div>
               <div className="images_right">
                 <div className="container_1">
-                  <img src="images/img-4.png" alt="Avatar" className="image" style={{ width: '100%' }} />
+                  <img src="images/appIcons/Bulma.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
-                    <div className="text"><img src="images/search-icon.png" /></div>
+                    <div className="text"><img src="images/appIcons/Bulma.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
                   </div>
                 </div>
                 <div className="container_1">
-                  <img src="images/img-5.png" alt="Avatar" className="image" style={{ width: '100%' }} />
+                  <img src="images/appIcons/Bulma.png" alt="Avatar" className="image" style={{ width: '100%' }} />
                   <div className="middle">
-                    <div className="text"><img src="images/search-icon.png" /></div>
+                    <div className="text"><img src="images/appIcons/Bulma.png" /></div>
                     <h2 className="fact_text">Established Fact</h2>
                   </div>
                 </div>
@@ -231,22 +241,22 @@ function Home() {
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-sm-6">
-            <div className="icon_1"><img src="images/icon-3.png" /></div>
+            <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
             <h3 className="accounting_text_1">16+</h3>
             <p className="yers_text">Years of Business</p>
           </div>
           <div className="col-lg-3 col-sm-6">
-            <div className="icon_1"><img src="images/icon-4.png" /></div>
+            <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
             <h3 className="accounting_text_1">55+</h3>
             <p className="yers_text">Projects Delivered</p>
           </div>
           <div className="col-lg-3 col-sm-6">
-            <div className="icon_1"><img src="images/icon-2.png" /></div>
+            <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
             <h3 className="accounting_text_1">300+</h3>
             <p className="yers_text">Satisfied Customers</p>
           </div>
           <div className="col-lg-3 col-sm-6">
-            <div className="icon_1"><img src="images/icon-1.png" /></div>
+            <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
             <h3 className="accounting_text_1">10+</h3>
             <p className="yers_text">Services</p>
           </div>
@@ -260,50 +270,50 @@ function Home() {
         <div className="team_section_2 layout_padding">
           <div className="row">
             <div className="col-sm-3">
-              <img src="images/img-7.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Readable</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-3">
-              <img src="images/img-8.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Content</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-3">
-              <img src="images/img-9.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Readable</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-3">
-              <img src="images/img-10.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Content</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
@@ -324,9 +334,9 @@ function Home() {
               <h1 className="what_taital">what is syas our clients</h1>
               <div className="client_section_2 layout_padding">
                 <ul>
-                  <li><img src="images/round-1.png" className="round_1" /></li>
-                  <li><img src="images/img-11.png" className="image_11" /></li>
-                  <li><img src="images/round-2.png" className="round_2" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="round_1" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="image_11" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="round_2" /></li>
                 </ul>
                 <p className="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
               </div>
@@ -335,9 +345,9 @@ function Home() {
               <h1 className="what_taital">what is syas our clients</h1>
               <div className="client_section_2 layout_padding">
                 <ul>
-                  <li><img src="images/round-1.png" className="round_1" /></li>
-                  <li><img src="images/img-11.png" className="image_11" /></li>
-                  <li><img src="images/round-2.png" className="round_2" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="round_1" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="image_11" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="round_2" /></li>
                 </ul>
                 <p className="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
               </div>
@@ -346,9 +356,9 @@ function Home() {
               <h1 className="what_taital">what is syas our clients</h1>
               <div className="client_section_2 layout_padding">
                 <ul>
-                  <li><img src="images/round-1.png" className="round_1" /></li>
-                  <li><img src="images/img-11.png" className="image_11" /></li>
-                  <li><img src="images/round-2.png" className="round_2" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="round_1" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="image_11" /></li>
+                  <li><img src="images/appIcons/Bulma.png" className="round_2" /></li>
                 </ul>
                 <p className="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
               </div>
@@ -372,7 +382,7 @@ function About() {
             <div className="moremore_bt"><a href="#">Read More </a></div>
           </div>
           <div className="col-md-4">
-            <div><img src="images/img-1.png" className="image_1" /></div>
+            <div><img src="images/appIcons/Bulma.png" className="image_1" /></div>
           </div>
         </div>
       </div>
@@ -391,7 +401,7 @@ function Services() {
           <div className="row">
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/icon-1.png" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Accounting</h3>
               <p className="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
               <div className="moremore_bt_1"><a href="#">Read More </a></div>
@@ -399,7 +409,7 @@ function Services() {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="box_main active">
-              <div className="icon_1"><img src="images/icon-2.png" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Advisor</h3>
               <p className="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
               <div className="moremore_bt_1"><a href="#">Read More </a></div>
@@ -407,7 +417,7 @@ function Services() {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/icon-3.png" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Investment</h3>
               <p className="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
               <div className="moremore_bt_1"><a href="#">Read More </a></div>
@@ -415,7 +425,7 @@ function Services() {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="box_main">
-              <div className="icon_1"><img src="images/icon-4.png" /></div>
+              <div className="icon_1"><img src="images/appIcons/Bulma.png" /></div>
               <h3 className="accounting_text">Financial</h3>
               <p className="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
               <div className="moremore_bt_1"><a href="#">Read More </a></div>
@@ -438,50 +448,50 @@ function Team() {
         <div className="team_section_2 layout_padding">
           <div className="row">
             <div className="col-sm-3">
-              <img src="images/img-7.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Readable</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-3">
-              <img src="images/img-8.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Content</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-3">
-              <img src="images/img-9.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Readable</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-3">
-              <img src="images/img-10.png" className="image_7" />
+              <img src="images/appIcons/Bulma.png" className="image_7" />
               <p className="readable_text">Content</p>
               <p className="readable_text_1">Follow Us</p>
               <div className="social_icon">
                 <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
+                  <li><a href="#"><img src="images/appIcons/Bulma.png" /></a></li>
                 </ul>
               </div>
             </div>
@@ -546,7 +556,7 @@ function ToolRoom() {
     </div>
    
     <div className="slider slide-1">
-      <img src="images/cnc-milling.png" alt="" />
+      <img src="images/appIcons/Bulma.png" alt="" />
       <div className="slider-content">
         <h4>New Product</h4>
         <h2>Denim Longline T-Shirt Dress With Split</h2>
@@ -558,7 +568,7 @@ function ToolRoom() {
     </div>
    
     <div className="slider slide-2">
-      <img src="images/model-2.png" alt="" />
+      <img src="images/appIcons/Bulma.png" alt="" />
       <div className="slider-content">
         <h4>New Product</h4>
         <h2>Denim Longline T-Shirt Dress With Split</h2>
@@ -570,7 +580,7 @@ function ToolRoom() {
     </div>
    
     <div className="slider slide-3">
-      <img src="images/model-3.png" alt="" />
+      <img src="images/appIcons/Bulma.png" alt="" />
       <div className="slider-content">
         <h4>New Product</h4>
         <h2>Denim Longline T-Shirt Dress With Split</h2>
@@ -582,7 +592,7 @@ function ToolRoom() {
     </div>
    
     <div className="slider slide-4">
-      <img src="images/model-4.png" alt="" />
+      <img src="images/appIcons/Bulma.png" alt="" />
       <div className="slider-content">
         <h4>New Product</h4>
         <h2>Denim Longline T-Shirt Dress With Split</h2>

@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+:root {
+  --primary-gradient: linear-gradient(90deg,#0f172a,#334155);
+  --accent-gradient: linear-gradient(135deg,#0ea5e9,#6366f1);
+}
