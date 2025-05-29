@@ -44,9 +44,18 @@ function Footer() {
         <div className="row">
           <div className="col-lg-3 col-sm-6">
             <h4 className="about_text">About Financial</h4>
-            <div className="location_text"><img src="images/map-icon.png"><span className="padding_left_15">Locations</span></img></div>
-            <div className="location_text"><img src="images/call-icon.png"><span className="padding_left_15">+01 9876543210</span></img></div>
-            <div className="location_text"><img src="images/mail-icon.png"><span className="padding_left_15">demo@gmail.com</span></img></div>
+            <div className="location_text">
+              <img src="images/map-icon.png" alt="Map" />
+              <span className="padding_left_15">Locations</span>
+            </div>
+            <div className="location_text">
+              <img src="images/call-icon.png" alt="Call" />
+              <span className="padding_left_15">+01 9876543210</span>
+            </div>
+            <div className="location_text">
+              <img src="images/mail-icon.png" alt="Mail" />
+              <span className="padding_left_15">demo@gmail.com</span>
+            </div>
           </div>
           <div className="col-lg-3 col-sm-6">
             <h4 className="about_text">About Financial</h4>
@@ -56,14 +65,14 @@ function Footer() {
             <h4 className="about_text">Instagram</h4>
             <div className="footer_images">
               <div className="footer_images_left">
-                <div className="image_12"><img src="images/img-12.png"></img></div>
-                <div className="image_12"><img src="images/img-12.png"></img></div>
-                <div className="image_12"><img src="images/img-12.png"></img></div>
+                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
+                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
+                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
               </div>
               <div className="footer_images_right">
-                <div className="image_12"><img src="images/img-12.png"></img></div>
-                <div className="image_12"><img src="images/img-12.png"></img></div>
-                <div className="image_12"><img src="images/img-12.png"></img></div>
+                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
+                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
+                <div className="image_12"><img src="images/img-12.png" alt="" /></div>
               </div>
             </div>
           </div>
@@ -73,10 +82,10 @@ function Footer() {
             <div className="subscribe_bt"><a href="#">Subscribe</a></div>
             <div className="footer_social_icon">
               <ul>
-                <li><a href="#"><img src="images/fb-icon1.png"></img></a></li>
-                 <li><a href="#"><img src="images/twitter-icon1.png"></img></a></li>
-                <li><a href="#"><img src="images/linkedin-icon1.png"></img></a></li>
-                <li><a href="#"><img src="images/youtub-icon1.png"></img></a></li>
+                <li><a href="#"><img src="images/fb-icon1.png" alt="Facebook" /></a></li>
+                <li><a href="#"><img src="images/twitter-icon1.png" alt="Twitter" /></a></li>
+                <li><a href="#"><img src="images/linkedin-icon1.png" alt="LinkedIn" /></a></li>
+                <li><a href="#"><img src="images/youtub-icon1.png" alt="YouTube" /></a></li>
               </ul>
             </div>
           </div>
