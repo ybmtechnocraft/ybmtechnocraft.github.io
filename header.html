@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Header</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .hero-header {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #2ECC71;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            overflow: hidden;
+        }
+        .floating-cube {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform-origin: center;
+            opacity: 0;
+            animation: float-cube 8s infinite linear;
+        }
+        @keyframes float-cube {
+            0% {
+                transform: scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(2.5) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-header">
+        ACM-W NITK<br>Association for Computing Machinery - Women
+    </div>
+    <script>
+        function createFloatingCubes() {
+            const header = document.querySelector('.header');
+            setInterval(() => {
+                const cube = document.createElement('div');
+                cube.classList.add('floating-cube');
+                const size = Math.random() * 20 + 10;
+                cube.style.width = `${size}px`;
+                cube.style.height = `${size}px`;
+                cube.style.left = `${Math.random() * 100}%`;
+                cube.style.top = `${Math.random() * 100}%`;
+                cube.style.animationDuration = `${Math.random() * 5 + 4}s`;
+                
+                cube.style.background = `#E74C3C`;
+                
+                header.appendChild(cube);
+                
+                setTimeout(() => {
+                    cube.remove();
+                }, 8000);
+            }, 1000);
+        }
+        createFloatingCubes();
+    </script>
+</body>
+</html>
