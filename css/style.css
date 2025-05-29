@@ -911,10 +911,10 @@
    background-color: white !important; /* Green header */
  }
  
- /* Navbar links hover to red */
- .navbar-light .navbar-nav .nav-link:hover {
-   color: white !important;
- }
+/* Navbar links hover to red */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--ybm-secondary) !important;
+}
  
  /* Accent buttons or links hover: turn Red */
  .moremore_bt a:hover,

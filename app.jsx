@@ -1,5 +1,31 @@
 const { BrowserRouter, Routes, Route, Link } = ReactRouterDOM;
 
+function HeaderSection() {
+  React.useEffect(() => {
+    const header = document.querySelector('.hero-header');
+    const interval = setInterval(() => {
+      const cube = document.createElement('div');
+      cube.classList.add('floating-cube');
+      const size = Math.random() * 20 + 10;
+      cube.style.width = `${size}px`;
+      cube.style.height = `${size}px`;
+      cube.style.left = `${Math.random() * 100}%`;
+      cube.style.top = `${Math.random() * 100}%`;
+      cube.style.animationDuration = `${Math.random() * 5 + 4}s`;
+      cube.style.background = '#E74C3C';
+      header.appendChild(cube);
+      setTimeout(() => cube.remove(), 8000);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <div className="hero-header">
+      <div>YBM Techno Craft<br/>One Stop Solution for all your plastic needs</div>
+      <div className="hero-header-line"></div>
+    </div>
+  );
+}
+
 function Navbar() {
   return (
     <div className="header_section header_bg">
@@ -12,7 +38,10 @@ function Navbar() {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/tool-room">Tool Room</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/tool-room-pages">Tools</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/moulds">Moulds</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/products">Products</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/production">Production</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/services">Services</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/team">Team</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/contact">Contact Us</Link></li>
@@ -565,14 +594,124 @@ function ToolRoom() {
     </>
   );
 }
+
+function ToolRoomPages() {
+  const tools = [
+    { src: "images/Tools/CNC Milling YMC 15 VMC 1020.png", title: "CNC Milling - YCM I5 VMC 1020" },
+    { src: "images/Tools/EDM Machine OSCARMAX.png", title: "EDM Machine - OSCARMAX" },
+    { src: "images/Tools/RPT Machine.png", title: "RPT Machine" },
+    { src: "images/Tools/Shibaura machine injection moulding.png", title: "Injection Moulding - SHIBAURA 180 Tons" },
+    { src: "images/Tools/Radial drilling.png", title: "Radial Drilling" },
+    { src: "images/Tools/Liquid silicon mold.png", title: "Liquid Silicon Mould" },
+    { src: "images/Tools/Surface grinding.png", title: "Surface Grinding" },
+    { src: "images/Tools/Lathe.png", title: "Lathe" }
+  ];
+  return (
+    <div className="layout_padding">
+      <div className="container">
+        <h1 className="services_taital">Tool Room Pages</h1>
+        <div className="row">
+          {tools.map(tool => (
+            <div key={tool.title} className="col-md-3 col-sm-6 mb-4 text-center">
+              <img src={tool.src} alt={tool.title} className="img-fluid" />
+              <h5 className="mt-2">{tool.title}</h5>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Moulds() {
+  const moulds = [
+    { title: 'Stack Mould', image: 'images/Stack mould/Stack mould 1.png', text: 'Stack moulds are an advanced form of multi-level injection moulding technology that significantly increases production efficiency.' },
+    { title: 'Bi Material Mould', image: 'images/Bi material mould/Bi material mould 1.png', text: 'The Bi-Material mould enables the integration of two distinct materials within a single injection moulding process.' },
+    { title: 'Bi Color Mould', image: 'images/Bi colour mould/Bi colour mould 1.png', text: 'Bi-Color moulds facilitate the injection of two different colors into a single component.' },
+    { title: 'LSR Mould', image: 'images/Tools/Liquid silicon mold.png', text: 'Liquid Silicone Rubber moulding represents a breakthrough in high-precision moulding technology.' },
+    { title: 'Collapsible Core - 18', image: 'images/Tools/Radial drilling.png', text: 'Collapsible core moulds are an advanced solution for manufacturing complex hollow parts with undercuts.' },
+    { title: 'Unscrewing Moulds', image: 'images/Tools/CNC Milling YMC 15 VMC 1020.png', text: 'Unscrewing moulds are specially designed for the production of threaded plastic parts that require automatic unscrewing.' }
+  ];
+  return (
+    <div className="layout_padding">
+      <div className="container">
+        <h1 className="services_taital">Moulds</h1>
+        {moulds.map((m, idx) => (
+          <div key={idx} className="row text-left align-items-center mb-5">
+            <div className="col-md-6">
+              <h2 className="services_taital">{m.title}</h2>
+              <p className="services_text">{m.text}</p>
+            </div>
+            <div className="col-md-6">
+              <img src={m.image} alt={m.title} className="img-fluid" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ImpactfulProducts() {
+  return (
+    <div className="layout_padding">
+      <div className="container">
+        <h1 className="services_taital">Impactful Products</h1>
+        <div className="row text-left align-items-center mb-5">
+          <div className="col-md-6">
+            <h2 className="services_taital">Automotive Industry</h2>
+            <h3>Mirror Cavity Housing Mould</h3>
+            <p className="services_text">Developed a 1+1 cavity mirror housing with a floating core and bump-off ejection.</p>
+          </div>
+          <div className="col-md-6">
+            <img src="images/Mirror cavity mould/Mirror cavity mould 1.png" alt="Mirror" className="img-fluid" />
+          </div>
+        </div>
+        <div className="row text-left align-items-center mb-5">
+          <div className="col-md-6 order-md-2">
+            <img src="images/Health care/Health care 1.png" alt="Health" className="img-fluid" />
+          </div>
+          <div className="col-md-6 order-md-1">
+            <h2 className="services_taital">Health Care Industry</h2>
+            <p className="services_text">Products designed for life sciences and biomedical applications.</p>
+          </div>
+        </div>
+        <div className="row text-left align-items-center">
+          <div className="col-md-6">
+            <h2 className="services_taital">Electrical Moulds</h2>
+            <p className="services_text">Muse Smart Ring charging case mould showcasing our precision.</p>
+          </div>
+          <div className="col-md-6">
+            <img src="images/Electrical item/Electrical item 1.png" alt="Electrical" className="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Production() {
+  return (
+    <div className="layout_padding">
+      <div className="container">
+        <h1 className="services_taital">Production</h1>
+        <p className="services_text">Moulding - General Information</p>
+      </div>
+    </div>
+  );
+}
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <HeaderSection />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/tool-room" element={<ToolRoom />} />
+        <Route path="/tool-room-pages" element={<ToolRoomPages />} />
+        <Route path="/moulds" element={<Moulds />} />
+        <Route path="/products" element={<ImpactfulProducts />} />
+        <Route path="/production" element={<Production />} />
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
