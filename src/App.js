@@ -28,6 +28,28 @@ const EnvelopeIcon = ({ className = "w-5 h-5" }) => (
     <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
   </svg>
 );
+
+const CalendarDaysIcon = ({ className = "w-10 h-10" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" strokeWidth="1.0" stroke="currentColor" className={className}><path d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"/></svg>
+);
+
+// --- Corrected/Verified SVG Icon Components for Stats Section ---
+// BriefcaseIcon (Verified Heroicons Outline)
+const BriefcaseIcon = ({ className = "w-10 h-10" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" strokeWidth="1.0" stroke="currentColor" className={className}><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 128 0 192 0 0-96c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM512 288l-192 0 0 32c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128z"/></svg>
+);
+
+// UserGroupIcon (Verified Heroicons Outline)
+const UserGroupIcon = ({ className = "w-10 h-10" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" strokeWidth="1.0" stroke="currentColor" className={className}><path strokeLinecap="round" strokeLinejoin="round" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM609.3 512l-137.8 0c5.4-9.4 8.6-20.3 8.6-32l0-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2l61.4 0C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
+);
+
+
+// WrenchScrewdriverIcon (Verified Heroicons Outline - this is stylistically consistent)
+const WrenchScrewdriverIcon = ({ className = "w-10 h-10" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" strokeWidth="1.0" stroke="currentColor" className={className}><path d="M96 0C78.3 0 64 14.3 64 32l0 96 64 0 0-96c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32l0 96 64 0 0-96c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l0 32c0 77.4 55 142 128 156.8l0 67.2c0 17.7 14.3 32 32 32s32-14.3 32-32l0-67.2C297 398 352 333.4 352 256l0-32c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
+);
+
 const FacebookIcon = () => <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" /></svg>;
 const TwitterIcon = () => <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>;
 const LinkedInIcon = () => <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" /></svg>;
@@ -299,18 +321,18 @@ function Home({ setCurrentPage }) {
   ];
 
   const projects = [
-    { src: "/images/Multi cavity cap mould/Multi cavity cap mould 1.png", alt: "Multi Cavity Cap Mould", title: "Our Flagship Project", description: "Precision multi-cavity cap moulds for high volume production." },
-    { src: "/images/Bi colour mould/Bi colour mould 1.png", alt: "Bi-Colour Mould", title: "Project Alpha", description: "Innovative bi-colour moulding solutions." },
+    { src: "/images/Bi colour mould/Bi colour mould 1.png", alt: "Bi-Colour Mould", title: "Our Flagship Project", description: "Precision multi-cavity cap moulds for high volume production." },
+    { src: "/images/Multi cavity cap mould/Multi cavity cap mould 1.png", alt: "Bi-Colour Mould", title: "Project Alpha", description: "Innovative bi-colour moulding solutions." },
     { src: "/images/Mirror cavity mould/Mirror cavity mould 1.png", alt: "Mirror Cavity Mould", title: "Project Beta", description: "Cutting-edge mirror finish cavity designs." },
     { src: "/images/Electrical item/Electrical item 1.png", alt: "Electrical Item Mould", title: "Project Gamma", description: "High-precision manufacturing for electrical components." },
     { src: "/images/Health care/Health care 1.png", alt: "Health Care Product Mould", title: "Project Delta", description: "Moulds for critical healthcare applications." },
   ];
   
   const stats = [
-    { icon: "/images/logo.jpg", value: "16+", label: "Years of Business" }, // Using logo as a generic icon
-    { icon: "/images/Techno craft/Techno craft 2.png", value: "55+", label: "Projects Delivered" },
-    { icon: "/images/Clients/C1.png", value: "300+", label: "Satisfied Customers" },
-    { icon: "/images/Tools/CNC Milling YMC 15 VMC 1020.png", value: "10+", label: "Services" },
+    { icon: CalendarDaysIcon, value: "16+", label: "Years of Business" },
+    { icon: BriefcaseIcon, value: "55+", label: "Projects Delivered" },
+    { icon: UserGroupIcon, value: "300+", label: "Satisfied Customers" },
+    { icon: WrenchScrewdriverIcon, value: "10+", label: "Services" },
   ];
 
   const teamMembers = [
@@ -444,16 +466,22 @@ function Home({ setCurrentPage }) {
       <section className="py-16 md:py-24 bg-gradient-to-r from-slate-700 to-slate-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="p-6">
-                <ImagePlaceholder src={stat.icon} alt={`${stat.label} icon`} className="h-16 w-16 mb-4 rounded-full shadow-md mx-auto bg-white p-2 object-contain" fallbackText={stat.label.substring(0,3)} />
-                <div className="text-4xl font-bold text-sky-400">{stat.value}</div>
-                <p className="text-lg text-slate-300 mt-1">{stat.label}</p>
-              </div>
-            ))}
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon; // IconComponent is now the SVG component itself
+              return (
+                <div key={index} className="p-6">
+                  {/* Wrapper for the icon to create the circular background and centering */}
+                  <div className="h-20 w-20 mb-6 rounded-full shadow-lg mx-auto bg-white p-4 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="h-10 w-10 text-sky-600 group-hover:text-sky-500 transition-colors duration-300" /> {/* SVG icon */}
+                  </div>
+                  <div className="text-4xl font-bold text-sky-400">{stat.value}</div>
+                  <p className="text-lg text-slate-300 mt-1">{stat.label}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </section>
+      </section> 
 
       {/* Team Section */}
       <section className="py-16 md:py-24">
