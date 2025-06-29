@@ -89,10 +89,11 @@ function Navbar({ setCurrentPage }) {
     { name: "Home", page: "home" },
     { name: "About", page: "about" },
     { name: "Tool Room", page: "tool-room" },
-    { 
-      name: "Moulds", 
-      page: "moulds", 
-      dropdown: true, 
+    { name: "Moulds", page: "moulds" },
+    {
+      name: "Mould Types",
+      page: "moulds",
+      dropdown: true,
       subLinks: [
         { name: "Stack Mould", page: "moulds-stack" },
         { name: "Bi-Material Mould", page: "moulds-bimaterial" },
@@ -261,18 +262,19 @@ function Footer() {
   return (
     <footer className="bg-slate-800 text-gray-300 py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
                 <ImagePlaceholder src="/images/logo.jpg" alt="YBM Footer Logo" className="h-10 w-auto rounded" fallbackText="YBM"/>
                 <h4 className="text-xl font-semibold text-white">YBM Techno Craft</h4>
             </div>
             <p className="text-sm text-slate-400 mb-3">One Stop Solution for all your plastic needs.</p>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center"><MapPinIcon className="mr-2 text-sky-400" /><span>123 Industrial Area, Pune, MH, India</span></li>
-              <li className="flex items-center"><PhoneIcon className="mr-2 text-sky-400" /><span>+91 98765 43210</span></li>
-              <li className="flex items-center"><EnvelopeIcon className="mr-2 text-sky-400" /><span>info@ybmtechnocraft.com</span></li>
-            </ul>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center">
+                  <EnvelopeIcon className="mr-2 text-sky-400" />
+                  <a href="mailto:info@ybmtechnocraft.com" className="hover:underline">info@ybmtechnocraft.com</a>
+                </li>
+              </ul>
           </div>
           <div>
             <h4 className="text-xl font-semibold text-white mb-4">Quick Links</h4>
@@ -289,17 +291,6 @@ function Footer() {
                 {footerGalleryImages.map((src, i) => (
                     <ImagePlaceholder key={i} src={src} alt={`Gallery image ${i+1}`} className="rounded-lg shadow-md hover:opacity-80 transition-opacity aspect-square object-cover" fallbackText={`Img ${i+1}`} />
                 ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="text-xl font-semibold text-white mb-4">Newsletter</h4>
-            <input type="email" className="w-full p-3 rounded-md bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm" placeholder="Enter your email" />
-            <button className="mt-3 w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-4 rounded-md transition-colors text-sm">Subscribe</button>
-            <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><span className="sr-only">Facebook</span><FacebookIcon /></a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><span className="sr-only">Twitter</span><TwitterIcon /></a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><span className="sr-only">LinkedIn</span><LinkedInIcon /></a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors"><span className="sr-only">YouTube</span><YouTubeIcon /></a>
             </div>
           </div>
         </div>
@@ -511,51 +502,6 @@ function Home({ setCurrentPage }) {
         </div>
       </section>
 
-      {/* Client Testimonials Section */}
-      <section className="py-16 md:py-24 bg-slate-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-          <div className="relative max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-xl">
-            <div className="text-center">
-              <ImagePlaceholder 
-                src={testimonials[currentTestimonial].clientImage} 
-                alt={testimonials[currentTestimonial].clientName} 
-                className="w-24 h-24 rounded-full mx-auto mb-6 shadow-md object-cover"
-                fallbackText={testimonials[currentTestimonial].clientName.substring(0,1)}
-              />
-              <p className="text-lg md:text-xl text-slate-700 italic leading-relaxed mb-6">
-                "{testimonials[currentTestimonial].quote}"
-              </p>
-              <h4 className="text-lg font-semibold text-sky-600">{testimonials[currentTestimonial].clientName}</h4>
-              <p className="text-sm text-slate-500">{testimonials[currentTestimonial].clientCompany}</p>
-            </div>
-            <button 
-              onClick={prevTestimonial} 
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 md:-translate-x-8 bg-white p-2 rounded-full shadow-md hover:bg-slate-200 transition-colors"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeftIcon />
-            </button>
-            <button 
-              onClick={nextTestimonial} 
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 md:translate-x-8 bg-white p-2 rounded-full shadow-md hover:bg-slate-200 transition-colors"
-              aria-label="Next testimonial"
-            >
-              <ChevronRightIcon />
-            </button>
-            <div className="flex justify-center mt-8 space-x-2">
-                {testimonials.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentTestimonial(index)}
-                        className={`w-3 h-3 rounded-full ${currentTestimonial === index ? 'bg-sky-500' : 'bg-slate-300 hover:bg-slate-400'} transition-colors`}
-                        aria-label={`Go to testimonial ${index + 1}`}
-                    />
-                ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
