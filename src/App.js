@@ -294,6 +294,9 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div className="mt-10 pt-8 border-t border-slate-700 text-center text-sm">
+          <p>&copy; {new Date().getFullYear()} YBM Techno Craft. All Rights Reserved.</p>
+        </div>
       </div>
     </footer>
   );
