@@ -271,7 +271,7 @@ function Footer() {
             <p className="text-sm text-slate-400 mb-3">One Stop Solution for all your plastic needs.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center">
-                  <EnvelopeIcon className="mr-2 text-sky-400" />
+                  <EnvelopeIcon className="w-4 h-4 mr-2 text-sky-400" />
                   <a href="mailto:info@ybmtechnocraft.com" className="hover:underline">info@ybmtechnocraft.com</a>
                 </li>
               </ul>
@@ -293,9 +293,6 @@ function Footer() {
                 ))}
             </div>
           </div>
-        </div>
-        <div className="mt-10 pt-8 border-t border-slate-700 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} YBM Techno Craft. All Rights Reserved. Inspired by <a href="https://html.design" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">Free HTML Templates</a>.</p>
         </div>
       </div>
     </footer>
